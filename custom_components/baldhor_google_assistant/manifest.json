@@ -1,6 +1,6 @@
 {
-  "domain": "google_assistant",
-  "name": "Google Assistant",
+  "domain": "baldhor_google_assistant",
+  "name": "Baldhor Google Assistant",
   "after_dependencies": ["camera", "matter"],
   "codeowners": ["@home-assistant/cloud"],
   "dependencies": ["http"],
