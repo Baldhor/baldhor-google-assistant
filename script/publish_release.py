@@ -19,7 +19,7 @@ def main() -> int:
     assert github_token is not None, "GITHUB_TOKEN is not set"
     print("Fetching draft release...")
     github = Github(auth=Auth.Token(github_token))
-    repo = github.get_repo("leikoilja/ha-google-home")
+    repo = github.get_repo("Baldhor/baldhor-google-assistant")
     release = repo.get_releases()[0]
     if not release.draft:
         print("The latest release is not a draft!")
@@ -33,7 +33,7 @@ def main() -> int:
 def update_manifests(repo: Repository, version: str) -> None:
     """Update manifest.json and hacs.json"""
     print("Updating manifest.json...")
-    manifest = repo.get_contents("custom_components/google_home/manifest.json")
+    manifest = repo.get_contents("custom_components/baldhor_google_assitant/manifest.json")
     assert isinstance(manifest, ContentFile)
     manifest_json = json.loads(manifest.decoded_content)
     manifest_json["version"] = version
