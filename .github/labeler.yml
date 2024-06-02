@@ -9,6 +9,3 @@ documentation:
 github structure:
   - any: [".github/**/*"]
     all: ["!**/*.py"]
-
-translation:
-  - any: ["custom_components/baldhor_google_assistant/translations/*.json"]

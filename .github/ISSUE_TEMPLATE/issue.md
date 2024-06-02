@@ -12,7 +12,7 @@ Issues not containing the minimum requirements will be closed:
 To help us to resolve this issue please include the following information:
 - Describe the issue in detail.
 - Provide steps to reproduce this issue.
-- Add version of the `google_home` integration.
+- Add version of the `baldhor_google_assistant` integration.
 - Add version of `glocaltokens` package.
 - Attach logs. The more the better. Enable debug logs for the integration.
 
@@ -24,7 +24,7 @@ To help us to resolve this issue please include the following information:
 
 ## Version of the integration
 
-If you are unsure about the version check the [github release here](https://github.com/leikoilja/ha-google-home/releases).
+If you are unsure about the version check the [github release here](https://github.com/Baldhor/baldhor-google-assistant/releases).
 
 <!-- If you are not using the newest version, download and try that before opening an issue.
 -->
@@ -40,7 +40,7 @@ Add version here.
 logger:
   default: debug
   logs:
-    custom_components.google_home: debug
+    custom_components.baldhor_google_assistant: debug
 -->
 
 <!-- Paste logs below here-->

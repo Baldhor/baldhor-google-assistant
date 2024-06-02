@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "google_assistant"
+name = "baldhor_google_assistant"
 version = "0.0.0"
 description = "Home Assistant Google Assistant community integration from Baldhor"
 authors = ["Baldhor <baldhors@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "google_assitant", from = "custom_components"}]
+packages = [{include = "baldhor_google_assitant", from = "custom_components"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
