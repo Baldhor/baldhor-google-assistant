@@ -27,7 +27,7 @@ from homeassistant.components import (
     water_heater,
 )
 
-DOMAIN = "google_assistant"
+DOMAIN = "baldhor_google_assistant"
 
 GOOGLE_ASSISTANT_API_ENDPOINT = "/api/google_assistant"
 

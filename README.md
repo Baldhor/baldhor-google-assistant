@@ -22,25 +22,39 @@
   <p>
     Standard config file looks like this:
     <code>
-      entity_config:
-        alarm_control_panel.alarmo:
-          name: Surveillance
-          room: Maison
+      google_assistant:
+        project_id: xxx
+        service_account: !include SERVICE_ACCOUNT.JSON
+        secure_devices_pin: 'xxx'
+        report_state: true
+        exposed_domains:
+          - camera
+        entity_config:
+          alarm_control_panel.alarmo:
+            name: Surveillance
+            room: Maison
     </code>
   </p>
 
   <p>
-    With this custom component, you can add:
+    With this custom component, you can do this instead:
     <code>
-      entity_config:
-        alarm_control_panel.alarmo:
-          name: Surveillance
-          room: Maison
-          lang: fr
-          armed_away: Absent
-          armed_night: Nuit
-          armed_vacancy: Vacances
-          triggered: Déclenché
+      baldhor_google_assistant:
+        project_id: xxx
+        service_account: !include SERVICE_ACCOUNT.JSON
+        secure_devices_pin: 'xxx'
+        report_state: true
+        exposed_domains:
+          - camera
+        entity_config:
+          alarm_control_panel.alarmo:
+            name: Surveillance
+            room: Maison
+            lang: fr
+            armed_away: Absent
+            armed_night: Nuit
+            armed_vacancy: Vacances
+            triggered: Déclenché
     </code>
   </p>
 </p>
