@@ -1591,17 +1591,40 @@ class ArmDisArmTrait(_Trait):
         response = {}
         levels = []
         for state in self._supported_states():
-            # level synonyms are generated from state names
-            # 'armed_away' becomes 'armed away' or 'away'
-            level_synonym = [state.replace("_", " ")]
-            if state != STATE_ALARM_TRIGGERED:
-                level_synonym.append(state.split("_")[1])
+            if state == STATE_ALARM_ARMED_HOME:
+                level = {
+                    "level_name": state,
+                    "level_values": [{"level_synonym": ["présence"], "lang": "fr"}],
+                }
+                levels.append(level)
 
-            level = {
-                "level_name": state,
-                "level_values": [{"level_synonym": level_synonym, "lang": "en"}],
-            }
-            levels.append(level)
+            if state == STATE_ALARM_ARMED_AWAY:
+                level = {
+                    "level_name": state,
+                    "level_values": [{"level_synonym": ["absence"], "lang": "fr"}],
+                }
+                levels.append(level)
+
+            if state == STATE_ALARM_ARMED_NIGHT:
+                level = {
+                    "level_name": state,
+                    "level_values": [{"level_synonym": ["nuit"], "lang": "fr"}],
+                }
+                levels.append(level)
+
+            if state == STATE_ALARM_ARMED_CUSTOM_BYPASS:
+                level = {
+                    "level_name": state,
+                    "level_values": [{"level_synonym": ["personnalisé"], "lang": "fr"}],
+                }
+                levels.append(level)
+
+            if state == STATE_ALARM_TRIGGERED:
+                level = {
+                    "level_name": state,
+                    "level_values": [{"level_synonym": ["déclenché"], "lang": "fr"}],
+                }
+                levels.append(level)
 
         response["availableArmLevels"] = {"levels": levels, "ordered": False}
         return response
