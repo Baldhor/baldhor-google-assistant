@@ -1594,35 +1594,35 @@ class ArmDisArmTrait(_Trait):
             if state == STATE_ALARM_ARMED_HOME:
                 level = {
                     "level_name": state,
-                    "level_values": [{"level_synonym": ["présence"], "lang": "fr"}],
+                    "level_values": [{"level_synonym": ["Présence"], "lang": "fr"}],
                 }
                 levels.append(level)
 
             if state == STATE_ALARM_ARMED_AWAY:
                 level = {
                     "level_name": state,
-                    "level_values": [{"level_synonym": ["absence"], "lang": "fr"}],
+                    "level_values": [{"level_synonym": ["Absence"], "lang": "fr"}],
                 }
                 levels.append(level)
 
             if state == STATE_ALARM_ARMED_NIGHT:
                 level = {
                     "level_name": state,
-                    "level_values": [{"level_synonym": ["nuit"], "lang": "fr"}],
+                    "level_values": [{"level_synonym": ["Nuit"], "lang": "fr"}],
                 }
                 levels.append(level)
 
             if state == STATE_ALARM_ARMED_CUSTOM_BYPASS:
                 level = {
                     "level_name": state,
-                    "level_values": [{"level_synonym": ["personnalisé"], "lang": "fr"}],
+                    "level_values": [{"level_synonym": ["Personnalisé"], "lang": "fr"}],
                 }
                 levels.append(level)
 
             if state == STATE_ALARM_TRIGGERED:
                 level = {
                     "level_name": state,
-                    "level_values": [{"level_synonym": ["déclenché"], "lang": "fr"}],
+                    "level_values": [{"level_synonym": ["Déclenché"], "lang": "fr"}],
                 }
                 levels.append(level)
 
