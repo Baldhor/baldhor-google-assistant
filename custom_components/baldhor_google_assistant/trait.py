@@ -1692,7 +1692,7 @@ def _get_fan_speed(speed_name: str) -> dict[str, Any]:
         "speed_values": [
             {
                 "speed_synonym": speed_synonyms,
-                "lang": "en",
+                "lang": "fr",
             }
         ],
     }
@@ -1767,7 +1767,7 @@ class FanSpeedTrait(_Trait):
             for mode in modes:
                 speed = {
                     "speed_name": mode,
-                    "speed_values": [{"speed_synonym": [mode], "lang": "en"}],
+                    "speed_values": [{"speed_synonym": [mode], "lang": "fr"}],
                 }
                 speeds.append(speed)
 
@@ -1907,7 +1907,7 @@ class ModesTrait(_Trait):
         mode = {
             "name": name,
             "name_values": [
-                {"name_synonym": self.SYNONYMS.get(name, [name]), "lang": "en"}
+                {"name_synonym": self.SYNONYMS.get(name, [name]), "lang": "fr"}
             ],
             "settings": [],
             "ordered": False,
@@ -1919,7 +1919,7 @@ class ModesTrait(_Trait):
                     "setting_values": [
                         {
                             "setting_synonym": self.SYNONYMS.get(setting, [setting]),
-                            "lang": "en",
+                            "lang": "fr",
                         }
                     ],
                 }
@@ -2119,7 +2119,7 @@ class InputSelectorTrait(_Trait):
         attrs = self.state.attributes
         sourcelist: list[str] = attrs.get(media_player.ATTR_INPUT_SOURCE_LIST) or []
         inputs = [
-            {"key": source, "names": [{"name_synonym": [source], "lang": "en"}]}
+            {"key": source, "names": [{"name_synonym": [source], "lang": "fr"}]}
             for source in sourcelist
         ]
 
